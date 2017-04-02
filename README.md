@@ -13,5 +13,7 @@ It is important to make sure you run **_keras_ with _tensorflow_** back-end. The
 File _model.py_ does the training of the network in _keras_. It uses a _data generator_ which parses local directories for training sequences and organizes them along with "putative" outputs in reasonably sized training batches for the network. Keras can handle training with data generators and this will make the overall process nicely. 
 ### The Network
 The network uses convolutional layers at the bottom to train image features and thereafter utilizes _recurrent layers_ with [Long Short Term Memory (LSTM)](https://en.wikipedia.org/wiki/Long_short-term_memory) neurons to "remember" _past features from the input images_. It also uses LSTMs to remember _past driving states_. In my opinion, this enabled me to train the network wih much less training data and without the need to generate additional images as Nvidia did [here](https://arxiv.org/abs/1604.07316). Although I haven't used this method to boost the traiing data, I am conjecturing that the network will perform great in both tracks if this method is employed. I will experiment as soon as I get the time...  
+## Demo Video
+A demo video of the vehicle steering autonomously for two laps of the track can be accessed [here](https://www.youtube.com/watch?v=OSy9ijPSalA). 
 ## Detailed Info
-Details about how the network is structured and the rationale behind its conception can be found in `writeup_report.pdf` included in this repository. 
+Details about how the network is structured and the rationale behind its conception can be found in yje [writeup_report.pdf](https://github.com/terzakig/SelfDrivingCar1-BehavioralCloning/blob/master/writeup_report.pdf) file included in this repository. 
